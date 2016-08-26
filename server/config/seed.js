@@ -13,25 +13,89 @@ import SensorData from '../api/sensor_data/sensor_data.model'
 Sensor.find({}).remove()
   .then(() => {
     Sensor.create({
-      name: 'Temp. Vaso 1',
-      alias: 'TempSolo_vaso_1',
+      name: 'Temperatura',
+      alias: 'outsideTemp',
       unit: 'ºC'
-    }, {
-      name: 'Umidade Solo',
-      alias: 'UmSolo_vaso_1',
-      unit: 'U'
-    }, {
-      name: 'Temp. Ambiente',
-      alias: 'TempAmb_vaso_1',
+    },
+    {
+      name: 'Umidade',
+      alias: 'outsideHumidity',
+      unit: '%'
+    },
+    {
+      name: 'Ponto de orvalho',
+      alias: 'outsideDewPt',
       unit: 'ºC'
-    }, {
-      name: 'Umidade Ambiente',
-      alias: 'UmiAmb_vaso_1',
-      unit: 'U'
-    }, {
-      name: 'Peso Vaso 1',
-      alias: 'Peso_vaso_1',
-      unit: 'g'
+    },
+    {
+      name: 'Direção do vento',
+      alias: 'windDirection',
+      unit: ''
+    },
+    {
+      name: 'Velocidade do vento',
+      alias: 'windSpeed',
+      unit: 'km/hr'
+    },
+    {
+      name: 'Barômetro',
+      alias: 'barometer',
+      unit: 'in'
+    },
+    {
+      name: 'BarTrend',
+      alias: 'BarTrend',
+      unit: ''
+    },
+    {
+      name: 'Vento frio',
+      alias: 'windChill',
+      unit: 'ºC'
+    },
+    {
+      name: 'Thw',
+      alias: 'thw',
+      unit: 'ºC'
+    },
+    {
+      name: 'Índice de calor',
+      alias: 'outsideHeatIndex',
+      unit: 'ºC'
+    },
+    {
+      name: 'Chuva (dia)',
+      alias: 'dailyRain',
+      unit: 'mm'
+    },
+    {
+      name: 'Chuva (tempestade)',
+      alias: 'stormRain',
+      unit: 'mm'
+    },
+    {
+      name: 'Chuva (tempestade)',
+      alias: 'stormRain',
+      unit: 'mm'
+    },
+    {
+      name: 'Chuva (mês)',
+      alias: 'monthlyRain',
+      unit: 'mm'
+    },
+    {
+      name: 'Chuva (taxa)',
+      alias: 'rainRate',
+      unit: 'mm/hr'
+    },
+    {
+      name: 'Nascer do sol',
+      alias: 'sunriseTime',
+      unit: ''
+    },
+    {
+      name: 'Por do sol',
+      alias: 'sunsetTime',
+      unit: ''
     }).then(() => {
       Sensor.findOne().exec()
         .then(sensor => {

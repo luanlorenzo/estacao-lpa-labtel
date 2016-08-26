@@ -29,7 +29,7 @@
 </div>-->
 
 <!-- top navigation -->
-<div class="top_nav" ng-show="nav.isLoggedIn()">
+<div class="top_nav" ng-show="true">
 
   <div class="nav_menu">
     <nav class="" role="navigation">
@@ -39,16 +39,9 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li class="" uib-dropdown>
-          <a href="javascript:;" class="user-profile dropdown-toggle" uib-dropdown-toggle data-toggle="dropdown" aria-expanded="false">
-            <img src="/assets/images/users-1-128.png" alt="">{{ nav.getCurrentUser().name }}
-            <span class=" fa fa-angle-down"></span>
+          <a href="javascript:;" style="margin-right: 10px;" class="user-profile dropdown-toggle" uib-dropdown-toggle data-toggle="dropdown" aria-expanded="false">
+            Estação Meteológica - UFSC Araranguá
           </a>
-          <ul uib-dropdown-menu class="dropdown-menu dropdown-usermenu pull-right">
-            <li><a href="/user/config">  Configurações</a>
-            </li>
-            <li><a ui-sref="logout"><i class="fa fa-sign-out pull-right"></i> Sair</a>
-            </li>
-          </ul>
         </li>
 
         <!--

@@ -4,10 +4,11 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <base href="/">
-    <title>Projeto Ara-Curitibanos</title>
+    <title>Estação Meteológica - UFSC Araranguá</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -38,7 +39,7 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="siteCurApp" class="nav-md" ng-style="{ 'background-color': userLoggedIn ? '#F7F7F7' : '#F7F7F7' }">
+  <body ng-app="siteCurApp" class="nav-md" ng-style="{ 'background-color': '#F7F7F7' }">
     <!--[if lt IE 7]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -56,7 +57,7 @@
 
         <navbar></navbar>
 
-        <div ng-class="{ 'right_col': userLoggedIn }" class="" role="main">
+        <div class="right_col" role="main">
           <div ui-view=""></div>
         </div>
 

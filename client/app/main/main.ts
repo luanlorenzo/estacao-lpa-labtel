@@ -6,6 +6,6 @@ angular.module('siteCurApp')
       .state('main', {
         url: '/',
         template: '<main></main>',
-        authenticate: true
+        //authenticate: true
       });
   });

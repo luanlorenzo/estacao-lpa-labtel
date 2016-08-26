@@ -1,20 +1,16 @@
-<div class="col-md-3 left_col" ng-show="sidemenu.isLoggedIn()">
+<div class="col-md-3 left_col">
   <div class="left_col scroll-view">
 
     <div class="navbar nav_title" style="border: 0;">
-      <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Ara-Curitibanos</span></a>
+      <a href="index.html" class="site_title"><img src="/assets/images/logo_ufsc.png" style="height: 45px; width: 40px;"/> <span>UFSC - <span style="font-size: 18px">Araranguá</span> </span></a>
     </div>
     <div class="clearfix"></div>
 
     <!-- menu prile quick info -->
     <div class="profile">
-      <div class="profile_pic">
+      <!--<div class="profile_pic">
         <img src="/assets/images/users-1-128.png" alt="..." class="img-circle profile_img">
-      </div>
-      <div class="profile_info">
-        <span>Bem vindo,</span>
-        <h2>{{ nav.getCurrentUser().name }}</h2>
-      </div>
+      </div>-->
     </div>
     <!-- /menu prile quick info -->
 
@@ -28,9 +24,9 @@
         <ul class="nav side-menu">
           <li class=" "><a ui-sref="main"><i class="fa fa-home"></i> Principal </span></a></li>
           <li class=" "><a ui-sref="sensor_explorer"><i class="fa fa-book"></i> Leituras </span></a></li>
-          <li class=" "><a ui-sref="sensor_calibra"><i class="fa fa-calculator"></i> Calibração </span></a></li>
-          <li class=" "><a ui-sref="atuadores"><i class="fa fa-bolt"></i> Atuadores </span></a></li>
-          <li ng-show="nav.isAdmin()"><a><i class="fa fa-edit"></i> Administração <span class="fa fa-chevron-down"></span></a>
+          <!--<li class=" "><a ui-sref="sensor_calibra"><i class="fa fa-calculator"></i> Calibração </span></a></li>-->
+          <!--<li class=" "><a ui-sref="atuadores"><i class="fa fa-bolt"></i> Atuadores </span></a></li>-->
+          <!--<li ng-show="nav.isAdmin()"><a><i class="fa fa-edit"></i> Administração <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu" style="display: none">
               <li>
                 <a ui-sref="user">Usuarios</a>
@@ -39,7 +35,7 @@
                 <a ui-sref="sensor">Sensores</a>
               </li>
             </ul>
-          </li>
+          </li>-->
 
         </ul>
       </div>
@@ -85,7 +81,7 @@
     <!-- /sidebar menu -->
 
     <!-- /menu footer buttons -->
-    <div class="sidebar-footer hidden-small">
+    <!--<div class="sidebar-footer hidden-small">
       <a data-toggle="tooltip" data-placement="top" title="Settings">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
       </a>
@@ -98,7 +94,7 @@
       <a data-toggle="tooltip" data-placement="top" title="Logout">
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
       </a>
-    </div>
+    </div>-->
     <!-- /menu footer buttons -->
   </div>
 </div>
