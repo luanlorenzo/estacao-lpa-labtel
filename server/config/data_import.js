@@ -38,11 +38,12 @@ export default function(app) {
         var dateStr = moment(lastReadDate).format('YYYY-MM-DD HH:mm:ss');
 
         baseUrl += '?data=' + dateStr;
-        console.log(baseUrl);
+        
       }
-
+      console.log(baseUrl);
       request(baseUrl, function (error, response, body) {
         if (!error && response.statusCode == 200) {
+          console.log(body);
           var result = JSON.parse(body);
           if(result) {
             var count = result.data.length;
