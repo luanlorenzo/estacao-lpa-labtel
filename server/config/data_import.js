@@ -29,7 +29,7 @@ export default function(app) {
       console.log('Olá');
       console.log(results);
 
-      var baseUrl = 'http://150.162.124.194/estacao.php';
+      var baseUrl = 'http://150.162.232.45/estacao.php';
 
       if(results.length == 1) {
         var lastRead      = results[0],
