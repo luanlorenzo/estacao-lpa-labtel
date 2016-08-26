@@ -26,6 +26,9 @@ export default function(app) {
     .exec()
     .then(function (results) {
       
+      console.log('Olá');
+      console.log(results);
+
       var baseUrl = 'http://150.162.124.194/estacao.php';
 
       if(results.length == 1) {
