@@ -64,6 +64,7 @@ export default function(app) {
         }
         else {
           console.log('Houve uma falha na obtençao dos dados...');
+          console.log(error);
         }
       });
 
