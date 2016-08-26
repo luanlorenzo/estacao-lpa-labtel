@@ -35,6 +35,7 @@ export default function(app) {
         var dateStr = moment(lastReadDate).format('YYYY-MM-DD HH:mm:ss');
 
         baseUrl += '?data=' + dateStr;
+        console.log(baseUrl);
       }
 
       request(baseUrl, function (error, response, body) {

@@ -1,5 +1,5 @@
 {
-  "name": "site-cur",
+  "name": "site-estacao",
   "version": "0.0.0",
   "main": "server/app.js",
   "dependencies": {
