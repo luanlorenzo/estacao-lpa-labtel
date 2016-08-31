@@ -52,7 +52,7 @@ export default function(app) {
               
               //Obtem os dados
               var leitData = leitura['date'];
-              console.log(leitData);
+              console.log('Data: ' + leitData);
               leitura = _.omit(leitura, ['date']);
               
               Sensor.find({
@@ -95,7 +95,7 @@ export default function(app) {
 
             sensorData.save()
               .then(s => {
-                console.log('Sensor data saved: ' + sensor.name);
+                //console.log('Sensor data saved: ' + sensor.name);
                 socketio.sockets.emit('data_arrived:' + sensor._id, sensorData);
                 return s;
               });
