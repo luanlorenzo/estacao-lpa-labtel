@@ -50,6 +50,7 @@
         "client/components/ui-router/ui-router.mock.ts",
         "client/components/user/user.module.ts",
         "client/components/user/user.service.ts",
+        "client/components/util/estdate.filter.ts",
         "client/components/util/util.module.ts",
         "client/components/util/util.service.ts",
         "client/typings/angularjs/angular.d.ts",
