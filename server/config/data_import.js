@@ -60,7 +60,7 @@ export default function(app) {
                 .exec()
                 .then(function (sensores) {
                   for(var sIndex in sensores) {
-                    addSensorData(sensores[sIndex], leitura[sensores[sIndex].alias], moment(leitData));
+                    addSensorData(sensores[sIndex], leitura[sensores[sIndex].alias], moment(leitData).utc());
                   }
                 });
             }

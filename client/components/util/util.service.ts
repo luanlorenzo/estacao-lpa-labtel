@@ -60,14 +60,6 @@ function UtilService($window) {
 }
 
 angular.module('siteCurApp.util')
-  .factory('Util', UtilService)
-  .filter('utc', [function() {
-    return function(date) {
-      if(angular.isNumber(date)) {
-        date = new Date(date);
-      }
-      return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
-    }   
-  } ]);
+  .factory('Util', UtilService);
 
 })();
