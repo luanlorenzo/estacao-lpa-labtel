@@ -79,6 +79,7 @@ export default function(app) {
         value = value.replace('°C', '');
         value = value.replace('%', '');
         value = value.replace('km/hr', '');
+        value = value.replace('m/s', '');
         value = value.replace(' in', '');
         value = value.replace(' mm/hr', '');
         value = value.replace(' mm', '');

@@ -35,7 +35,7 @@ Sensor.find({}).remove()
     {
       name: 'Velocidade do vento',
       alias: 'windSpeed',
-      unit: 'km/hr'
+      unit: 'm/s'
     },
     {
       name: 'Barômetro',
