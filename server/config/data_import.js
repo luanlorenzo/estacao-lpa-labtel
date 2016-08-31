@@ -52,6 +52,7 @@ export default function(app) {
               
               //Obtem os dados
               var leitData = leitura['date'];
+              console.log(leitData);
               leitura = _.omit(leitura, ['date']);
               
               Sensor.find({
