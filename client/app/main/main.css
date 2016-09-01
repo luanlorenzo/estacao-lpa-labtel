@@ -26,6 +26,14 @@
   margin-left: 15px;
 }
 
+.title {
+  font-size: 21px;
+}
+
+.h3-title {
+  height: 52px;
+}
+
 .title:hover {
   text-decoration: none;
 }

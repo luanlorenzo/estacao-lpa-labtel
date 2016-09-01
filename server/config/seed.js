@@ -13,17 +13,22 @@ import SensorData from '../api/sensor_data/sensor_data.model'
 Sensor.find({}).remove()
   .then(() => {
     Sensor.create({
-      name: 'Temperatura',
+      name: 'Temperatura Ambiente',
       alias: 'outsideTemp',
       unit: 'ºC'
     },
     {
-      name: 'Umidade',
+      name: 'Umidade Relativa',
       alias: 'outsideHumidity',
       unit: '%'
     },
     {
-      name: 'Ponto de orvalho',
+      name: 'Irradiação Solar',
+      alias: 'hiMonthlySolarRad',
+      unit: 'W/m²'
+    },
+    {
+      name: 'Temperatura de orvalho',
       alias: 'outsideDewPt',
       unit: 'ºC'
     },
@@ -38,7 +43,7 @@ Sensor.find({}).remove()
       unit: 'm/s'
     },
     {
-      name: 'Barômetro',
+      name: 'Pressão Atmosférica',
       alias: 'barometer',
       unit: 'in'
     },
@@ -63,27 +68,27 @@ Sensor.find({}).remove()
       unit: 'ºC'
     },
     {
-      name: 'Chuva (dia)',
+      name: 'Precipitação (dia)',
       alias: 'dailyRain',
       unit: 'mm'
     },
     {
-      name: 'Chuva (tempestade)',
+      name: 'Precipitação (tempestade)',
       alias: 'stormRain',
       unit: 'mm'
     },
     {
-      name: 'Chuva (tempestade)',
+      name: 'Precipitação (tempestade)',
       alias: 'stormRain',
       unit: 'mm'
     },
     {
-      name: 'Chuva (mês)',
+      name: 'Precipitação (mês)',
       alias: 'monthlyRain',
       unit: 'mm'
     },
     {
-      name: 'Chuva (taxa)',
+      name: 'Precipitação (taxa)',
       alias: 'rainRate',
       unit: 'mm/hr'
     },

@@ -27,7 +27,6 @@ export default function(app) {
     .then(function (results) {
       
       console.log('Olá');
-      console.log(results);
 
       var baseUrl = 'http://150.162.232.45/estacao.php';
 
@@ -40,14 +39,19 @@ export default function(app) {
         baseUrl += '?data=' + dateStr;
         
       }
-      console.log(baseUrl);
+
       request(baseUrl, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-          console.log(body);
+          
           var result = JSON.parse(body);
           if(result) {
             var count = result.data.length;
-            for (var i = 0; i < count; i++) {
+            
+            if(count > 0) {
+              handleLeituraRecursive(result.data, 0);
+            }
+
+            /*for (var i = 0; i < count; i++) {
               var leitura = result.data[i];
               
               //Obtem os dados
@@ -66,7 +70,8 @@ export default function(app) {
                     addSensorData(sensores[sIndex], leitura[sensores[sIndex].alias], _data);
                   }
                 });
-            }
+            }*/
+
           }
         }
         else {
@@ -74,6 +79,60 @@ export default function(app) {
           console.log(error);
         }
       });
+
+      function handleLeituraRecursive(leituras, index)
+      {
+        if(leituras.length == index)
+          return;
+
+        var leitura = leituras[index];
+        var date = leitura['date'];
+
+        leitura = _.omit(leitura, ['date']);
+        var props = [];
+        for(var prop in leitura) {
+          props.push(prop);
+        }
+
+        Sensor.find({
+          'alias': {$in: props}
+        })
+        .then(function (sensores) {
+          
+          var insertData = [];
+          for(var s in sensores) {
+            var sensorData = new SensorData();
+            sensorData.date = date;
+            var value = leitura[sensores[s].alias];
+
+            value = value.replace('Rising Rapidly', 'Subindo rapidamente');
+            value = value.replace('°C', '');
+            value = value.replace('%', '');
+            value = value.replace('km/hr', '');
+            value = value.replace('m/s', '');
+            value = value.replace(' in', '');
+            value = value.replace(' mm/hr', '');
+            value = value.replace(' mm', '');
+            value = value.replace(' W/m²', '');
+
+            sensorData.value = value;
+            sensorData.sensor = sensores[s]._id;
+            insertData.push(sensorData);
+          }
+
+          SensorData.create(insertData)
+          .then(function (res) {
+
+            for(var i = 0; i < res.length; i++) {
+              socketio.sockets.emit('data_arrived:' + res[i].sensor, res[i]);
+            }
+
+            handleLeituraRecursive(leituras, index+1);
+          });
+
+        });
+
+      }
 
       function addSensorData(sensor, value, date) {
 
@@ -107,7 +166,7 @@ export default function(app) {
 
   }
 
-  var textSched = later.parse.text('every 1 min');
+  var textSched = later.parse.text('every 10 sec');
   var timer = later.setInterval(task, textSched);
 }
 

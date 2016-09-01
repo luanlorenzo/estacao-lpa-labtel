@@ -48,6 +48,10 @@
 
     }
 
+    $onInit() {
+      
+    }
+
     openCalendar(e, date) {
         this.open[date] = true;
     }
