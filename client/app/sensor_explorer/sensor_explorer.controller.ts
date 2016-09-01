@@ -73,7 +73,7 @@
         this.labels = [];
 
         var _data = [];
-        for (let i = 0; i < this.sensor_data.length; i++) {
+        for (let i = (this.sensor_data.length - 1); i >= 0 ; i--) {
             _data.push(this.sensor_data[i].value);
             this.labels.push(this.$filter('date')(this.sensor_data[i].date, 'dd/MM/yyyy HH:mm'));
         }
