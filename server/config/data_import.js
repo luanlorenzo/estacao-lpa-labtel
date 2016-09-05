@@ -115,7 +115,7 @@ export default function(app) {
             value = value.replace(' in', '');
             value = value.replace(' mm/hr', '');
             value = value.replace(' mm', '');
-            value = value.replace(' W/m²', '');
+            value = value.replace('W/m²', '');
 
             sensorData.value = value;
             sensorData.sensor = sensores[s]._id;
