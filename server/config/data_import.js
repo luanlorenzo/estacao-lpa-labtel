@@ -140,6 +140,7 @@ export default function(app) {
 
         // Valores
         value = value.replace('Rising Rapidly', 'Subindo rapidamente');
+        value = value.replace('Rising Slowly', 'Subindo devagar');
         value = value.replace('°C', '');
         value = value.replace('%', '');
         value = value.replace('km/hr', '');
