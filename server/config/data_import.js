@@ -88,7 +88,7 @@ export default function(app) {
         var leitura = leituras[index];
         var date = leitura['date'];
         date = moment(date);
-        date.add(3, 'hour');
+        //date.add(3, 'hour');
 
         leitura = _.omit(leitura, ['date']);
         var props = [];
