@@ -28,7 +28,7 @@ export default function(app) {
       
       console.log('Olá');
 
-      var baseUrl = 'http://150.162.232.45/estacao.php';
+      var baseUrl = 'http://150.162.232.45:8080/estacao.php';
 
       if(results.length >= 1) {
         var lastRead      = results[0],
