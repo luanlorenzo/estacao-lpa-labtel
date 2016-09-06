@@ -23,7 +23,7 @@ Sensor.find({}).remove()
       unit: '%'
     },
     {
-      name: 'Irradiação Solar',
+      name: 'Irradiância Solar',
       alias: 'hiMonthlySolarRad',
       unit: 'W/m²'
     },
@@ -53,12 +53,12 @@ Sensor.find({}).remove()
       unit: ''
     },
     {
-      name: 'Vento frio',
+      name: 'Sensação Térmica',
       alias: 'windChill',
       unit: 'ºC'
     },
     {
-      name: 'Thw',
+      name: 'Índice THSW',
       alias: 'thw',
       unit: 'ºC'
     },
