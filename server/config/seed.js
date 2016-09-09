@@ -24,7 +24,7 @@ Sensor.find({}).remove()
     },
     {
       name: 'Irradiância Solar',
-      alias: 'hiMonthlySolarRad',
+      alias: 'solarRad',
       unit: 'W/m²'
     },
     {
