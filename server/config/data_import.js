@@ -113,6 +113,7 @@ export default function(app) {
             value = value.replace('km/hr', '');
             value = value.replace('m/s', '');
             value = value.replace(' in', '');
+            value = value.replace(' hPa', '');
             value = value.replace(' mm/hr', '');
             value = value.replace(' mm', '');
             value = value.replace('W/m²', '');

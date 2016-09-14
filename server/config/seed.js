@@ -65,7 +65,7 @@ Sensor.find({}).remove()
     {
       name: 'Pressão Atmosférica',
       alias: 'barometer',
-      unit: 'in'
+      unit: 'hPa'
     },
     {
       name: 'BarTrend',
