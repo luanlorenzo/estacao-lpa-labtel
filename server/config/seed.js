@@ -28,6 +28,16 @@ Sensor.find({}).remove()
       unit: 'W/m²'
     },
     {
+      name: 'Previsão do tempo',
+      alias: 'ForecastStr',
+      unit: ''
+    },
+    {
+      name: 'Fase da lua',
+      alias: 'MoonPhaseStr',
+      unit: ''
+    },
+    {
       name: 'Temperatura de orvalho',
       alias: 'outsideDewPt',
       unit: 'ºC'
