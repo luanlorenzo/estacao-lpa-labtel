@@ -38,6 +38,16 @@ Sensor.find({}).remove()
       unit: ''
     },
     {
+      name: 'Temperatura mínima',
+      alias: 'lowOutsideTemp',
+      unit: 'ºC'
+    },
+    {
+      name: 'Temperatura máxima',
+      alias: 'hiOutsideTemp',
+      unit: 'ºC'
+    },
+    {
       name: 'Temperatura de orvalho',
       alias: 'outsideDewPt',
       unit: 'ºC'
@@ -83,19 +93,9 @@ Sensor.find({}).remove()
       unit: 'mm'
     },
     {
-      name: 'Precipitação (tempestade)',
-      alias: 'stormRain',
-      unit: 'mm'
-    },
-    {
       name: 'Precipitação (mês)',
       alias: 'monthlyRain',
       unit: 'mm'
-    },
-    {
-      name: 'Precipitação (taxa)',
-      alias: 'rainRate',
-      unit: 'mm/hr'
     },
     {
       name: 'Nascer do sol',
