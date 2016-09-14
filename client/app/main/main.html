@@ -22,12 +22,8 @@
               <a class="title" ui-sref="sensor_explorer_read({id: '{{sensor._id}}'})">{{sensor.name}}</a>
             </h3>
            
-            <div ng-if="sensor.name != 'BarTrend' && 
-                        sensor.name != 'ForecastStr' &&
-                        sensor.name != 'MoonPhaseStr'" style="font-size: 33.5px; " class="count">{{sensor.last_read_value}} {{sensor.unit}}</div>
-            <div ng-if="sensor.name == 'BarTrend' && 
-                        sensor.name == 'ForecastStr' &&
-                        sensor.name == 'MoonPhaseStr'" style="font-size: 12px; height: 55px;" class="count">{{sensor.last_read_value}} {{sensor.unit}}</div>
+            <div ng-if="['BarTrend', 'ForecastStr', 'MoonPhaseStr'].indexOf(sensor.name) == -1" style="font-size: 33.5px; " class="count">{{sensor.last_read_value}} {{sensor.unit}}</div>
+            <div ng-if="['BarTrend', 'ForecastStr', 'MoonPhaseStr'].indexOf(sensor.name) > -1" style="font-size: 12px; height: 55px;" class="count">{{sensor.last_read_value}} {{sensor.unit}}</div>
             <p>{{sensor.last_read_date | date:'dd/MM/yyyy HH:mm'}}</p>
           </div>
         </div>
