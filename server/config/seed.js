@@ -88,11 +88,6 @@ Sensor.find({}).remove()
       unit: 'mm'
     },
     {
-      name: 'Precipitação (tempestade)',
-      alias: 'stormRain',
-      unit: 'mm'
-    },
-    {
       name: 'Precipitação (mês)',
       alias: 'monthlyRain',
       unit: 'mm'
