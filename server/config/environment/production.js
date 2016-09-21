@@ -20,5 +20,5 @@ module.exports = {
           'mongodb://localhost/siteestacao'
   },
 
-  seedDB: true
+  seedDB: false
 };
