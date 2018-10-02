@@ -1,27 +1,8 @@
-
-html, body, .body, .right_col, .main_container {
-  min-height: 100%;
-}
-
-html, body, .right_col {
-
-}
-
-.logos-login img {
-  width: 80px;
-  height: 100px;
-}
-
-.logos-login .tile {
-
-}
-
-
 /**
  * Bootstrap Fonts
  */
 
-@font-face {
+ @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot');
   src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
@@ -43,6 +24,25 @@ html, body, .right_col {
   url('../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+
+html, body, .body, .right_col, .main_container {
+  min-height: 100%;
+  font-family: sans-serif, Arial;
+}
+
+html, body, .right_col {
+
+}
+
+.logos-login img {
+  width: 80px;
+  height: 100px;
+}
+
+.logos-login .tile {
+
 }
 
 /**
@@ -2260,7 +2260,7 @@ body.nav-sm .main_container .top_nav {
 body.nav-sm .nav.side-menu li a {
   text-align: center !important;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
   padding: 10px 5px;
 }
 body.nav-sm .nav.side-menu li.active-sm {
@@ -2380,8 +2380,8 @@ body.nav-sm span.fa, body.nav-sm .menu_section h3 {
 }
 .nav_menu {
   float: left;
-  background: #EDEDED;
-  border-bottom: 1px solid #D9DEE4;
+  background: #ffffff;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
   width: 100%;
   position: relative;
 }
@@ -2396,12 +2396,14 @@ body.nav-md .container.body .col-md-3.left_col {
   position: fixed;
   display: flex;
 }
+
+/* sidemenu */
 body .container.body .col-md-3.left_col {
   height: 100%;
   background-color: #2A3F54;
 }
 body .container.body .right_col {
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 body.nav-md .container.body .right_col {
   padding: 10px 20px 0;
@@ -2530,9 +2532,8 @@ body.nav-md .container.body .right_col {
   margin-bottom: 5px
 }
 body {
-  color: #73879C;
-  background: #F7F7F7;
-  /*#ECF0F1; #FCFCFC*/
+  color: #455567;
+  background: #f7f7f7;
   font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -2542,7 +2543,7 @@ body {
   display: block;
   margin-left: 230px;
 }
-.main_container {}
+
 .no-padding {
   padding: 0 !important;
 }
@@ -2727,6 +2728,7 @@ a:hover, a:focus {
 }
 .nav.side-menu> li > a:hover {
   color: #F2F5F7 !important;
+  background-color: #00192b !important;
 }
 .nav.side-menu>li>a:hover, .nav>li>a:focus {
   text-decoration: none;
@@ -2764,6 +2766,7 @@ body.nav-md ul.nav.child_menu li:after {
 .nav.side-menu>li>a, .nav.child_menu>li>a {
   color: #E7E7E7 !important;
   font-weight: 500;
+  font-size: 14px;
 }
 .nav>li>a {
   position: relative;
@@ -2801,7 +2804,7 @@ li.current-page a {
   text-overflow: ellipsis;
   overflow: hidden;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 19px;
   width: 100%;
   color: #ECF0F1 !important;
   margin-left: 0 !important;
@@ -2823,8 +2826,8 @@ li.current-page a {
   padding: 10px 15px;
   color: #34495E !important;
 }
-.nav>li>a:hover, .nav>li>a:focus {
-  background-color: transparent;
+.nav>li>a:hover, .nav>li>a:active {
+  background-color: white;
 }
 .top_search {
   padding: 0;
@@ -2917,6 +2920,7 @@ footer {
 a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
   color: #fff !important;
 }
+
 .btn {
   border-radius: 3px;
 }
@@ -3889,7 +3893,7 @@ h4.graph_title {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 23px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -3903,7 +3907,7 @@ h4.graph_title {
   position: relative;
   display: block;
   margin-bottom: 12px;
-  border: 1px solid #E4E4E4;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
   -webkit-border-radius: 5px;
   overflow: hidden;
   padding-bottom: 5px;
@@ -7625,4 +7629,12 @@ ul.notifications {
   right: 100%;
   width: 100%;
   height: 2px;
+}
+
+.side-menu-btn {
+  display: inline-block;
+}
+.side-menu-btn:hover, .side-menu-btn:focus, .side-menu-btn:active {
+  background-color: #2098D1;
+  color: white;
 }

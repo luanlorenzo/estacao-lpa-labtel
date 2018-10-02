@@ -21,31 +21,33 @@
             <h3 class="h3-title">
               <a class="title" ui-sref="sensor_explorer_read({id: '{{sensor._id}}'})">{{sensor.name}}</a>
             </h3>
-           
-            <div ng-if="['BarTrend', 'ForecastStr', 'MoonPhaseStr'].indexOf(sensor.alias) == -1" style="font-size: 33.5px; " class="count">{{sensor.last_read_value}} {{sensor.unit}}</div>
-            <div ng-if="['BarTrend', 'ForecastStr', 'MoonPhaseStr'].indexOf(sensor.alias) > -1" style="font-size: 12px; height: 55px;" class="count">{{sensor.last_read_value}} {{sensor.unit}}</div>
+
+            <div ng-if="['BarTrend', 'ForecastStr', 'MoonPhaseStr'].indexOf(sensor.alias) == -1" style="font-size: 33.5px; "
+              class="count">{{sensor.last_read_value}} {{sensor.unit}}</div>
+            <div ng-if="['BarTrend', 'ForecastStr', 'MoonPhaseStr'].indexOf(sensor.alias) > -1" style="font-size: 12px; height: 55px;"
+              class="count">{{sensor.last_read_value}} {{sensor.unit}}</div>
             <p>{{sensor.last_read_date | date:'dd/MM/yyyy HH:mm'}}</p>
           </div>
         </div>
 
       </div>
       <div style="margin-bottom: 20px;" class="row col-lg-12">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="row top_tiles logos-login tile-stats">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="row top_tiles logos-login tile-stats">
             <div style="text-align: center;" class="animated tile flipInY col-lg-2 col-md-2 col-sm-6 col-xs-12">
-              <img style="width: 170px; height: 135px;" src="/assets/images/logo_lpa.png"/>
+              <a href="http://lpa.ufsc.br/"><img style="width: 170px; height: 135px;" src="/assets/images/logo_lpa.png" /></a>
             </div>
             <div style="text-align: center;" class="animated tile flipInY col-lg-2 col-md-2 col-sm-6 col-xs-12">
-              <img style="width: 110px; margin-top: 10px;" src="/assets/images/logo_labtel.png"/>
+              <a href="http://www.labtel.com.br/"><img style="width: 110px; margin-top: 10px;" src="/assets/images/logo_labtel.png" /></a>
             </div>
             <div style="text-align: center;" class="animated tile flipInY col-lg-2 col-md-2 col-sm-6 col-xs-12">
-               <img style="margin-top: 15px; width: 100px" src="/assets/images/logo_nteel.png"/>
+              <a href="http://ees.ufsc.br/nteel/"><img style="margin-top: 15px; width: 100px" src="/assets/images/logo_nteel.png" /></a>
             </div>
             <div style="text-align: center;" class="animated tile flipInY col-lg-2 col-md-2 col-sm-6 col-xs-12">
-              <img style="margin-top: 10px;" src="/assets/images/logo_ufsc.png"/>
+              <a href="https://ufsc.br/"><img style="margin-top: 10px;" src="/assets/images/logo_ufsc_dark.png" /></a>
             </div>
             <div style="text-align: center;" class="animated tile flipInY col-lg-3 col-md-2 col-sm-6 col-xs-12">
-               <img style="margin-top: 15px; width: 230px" src="/assets/images/logo_cnpq.png"/>
+              <a href="http://www.cnpq.br/"><img style="margin-top: 15px; width: 230px" src="/assets/images/logo_cnpq.png" /></a>
             </div>
           </div>
         </div>

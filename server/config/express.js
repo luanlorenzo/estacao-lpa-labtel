@@ -25,7 +25,7 @@ export default function(app) {
   var env = app.get('env');
 
   //var env = 'production';
-  //var env = 'development';
+  var env = 'development';
 
   app.set('views', config.root + '/server/views');
   app.engine('html', require('ejs').renderFile);

@@ -16,93 +16,75 @@ Sensor.find({}).remove()
       name: 'Temperatura Ambiente',
       alias: 'outsideTemp',
       unit: 'ºC'
-    },
-    {
+    }, {
       name: 'Umidade Relativa',
       alias: 'outsideHumidity',
       unit: '%'
-    },
-    {
+    }, {
       name: 'Irradiância Solar',
       alias: 'solarRad',
       unit: 'W/m²'
-    },
-    {
+    }, {
       name: 'Previsão do tempo',
       alias: 'ForecastStr',
       unit: ''
-    },
-    {
+    }, {
       name: 'Fase da lua',
       alias: 'MoonPhaseStr',
       unit: ''
-    },
-    {
+    }, {
       name: 'Temperatura mínima',
       alias: 'lowOutsideTemp',
       unit: 'ºC'
-    },
-    {
+    }, {
       name: 'Temperatura máxima',
       alias: 'hiOutsideTemp',
       unit: 'ºC'
-    },
-    {
+    }, {
       name: 'Temperatura de orvalho',
       alias: 'outsideDewPt',
       unit: 'ºC'
-    },
-    {
+    }, {
       name: 'Direção do vento',
       alias: 'windDirection',
       unit: ''
-    },
-    {
+    }, {
       name: 'Velocidade do vento',
       alias: 'windSpeed',
       unit: 'm/s'
-    },
-    {
+    }, {
       name: 'Pressão Atmosférica',
       alias: 'barometer',
       unit: 'hPa'
-    },
-    {
+    }, {
       name: 'BarTrend',
       alias: 'BarTrend',
       unit: ''
-    },
-    {
-      name: 'Sensação Térmica',
+    }, {
+      name: 'Wind Chill',
       alias: 'windChill',
       unit: 'ºC'
-    },
-    {
+    }, {
       name: 'Índice THSW',
       alias: 'thw',
       unit: 'ºC'
-    },
-    {
-      name: 'Índice de calor',
+    }, {
+      name: 'Heat Index',
       alias: 'outsideHeatIndex',
       unit: 'ºC'
-    },
-    {
+    }, {
       name: 'Precipitação (dia)',
       alias: 'dailyRain',
       unit: 'mm'
-    },
-    {
+    }, {
       name: 'Precipitação (mês)',
       alias: 'monthlyRain',
       unit: 'mm'
-    },
-    {
+    }, {
       name: 'Nascer do sol',
       alias: 'sunriseTime',
       unit: ''
-    },
-    {
+    }, {
       name: 'Por do sol',
       alias: 'sunsetTime',
       unit: ''
@@ -129,7 +111,7 @@ Sensor.find({}).remove()
   });
 
 
-User.find({}).remove()
+/* User.find({}).remove()
   .then(() => {
     User.create({
       provider: 'local',
@@ -146,4 +128,4 @@ User.find({}).remove()
     .then(() => {
       console.log('finished populating users');
     });
-  });
+  }); */

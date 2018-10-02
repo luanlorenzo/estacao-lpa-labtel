@@ -41,6 +41,9 @@
           <div class="col-md-6 col-sm-6 col-xs-12">
             <button class="btn btn-primary" ng-click="$ctrl.loadData()">Visualizar leituras</button>
           </div>
+          <div class="col-md-6 col-sm-6 col-xs-12" ng-show="$ctrl.dataLoaded" ng-click="$ctrl.downloadCSV()">
+            <button class="btn btn-primary">Download CSV</button>
+          </div>
         </div>
       </form>
     </div>
