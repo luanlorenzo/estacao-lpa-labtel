@@ -46,6 +46,24 @@
         date_end: false,
       };
 
+      this.chartOptions = {
+        title: {
+          text: 'Temperature data'
+        },
+        xAxis: {
+          id: 'dates-data',
+          title: {
+            text: 'Datas de medição'
+          },
+          categories: []
+        },
+        yAxis: {
+          id: 'values-data',
+          title: {
+            text: 'Valores'
+          }
+        }
+      };
     }
 
     $onInit() {
@@ -71,12 +89,26 @@
           this.series = [this.sensor.name];
           this.data = [];
           this.labels = [];
+          let _data = [];
 
-          var _data = [];
           for (let i = (this.sensor_data.length - 1); i >= 0; i--) {
             _data.push(this.sensor_data[i].value);
             this.labels.push(this.$filter('date')(this.sensor_data[i].date, 'dd/MM/yyyy HH:mm'));
           }
+
+          // Adding data to the Chart
+          this.hChart.xAxis[0].setCategories(this.labels);
+
+          this.hChart.addSeries({
+            name: this.sensor.name,
+            type: 'line',
+            color: '#08F',
+            yAxis: 'values-data',
+            data: _data.map((value) => {
+              return Number(value)
+            })
+          });
+
           this.data.push(_data);
 
           this.dataLoaded = true;

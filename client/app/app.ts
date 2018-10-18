@@ -19,14 +19,25 @@ angular.module('siteCurApp', [
     $urlRouterProvider
       .otherwise('/');
 
-    ChartJsProvider.setOptions({ colours : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
-
     $locationProvider.html5Mode(true);
-  }).
-  run(function ($rootScope, Auth) {
+  })
+  .run(function ($rootScope, Auth) {
     $rootScope.$on('$locationChangeStart', function (event, next, current) {
       Auth.isLoggedIn(function (state) {
         $rootScope.userLoggedIn = state;
       });
     });
-  });
+  })
+  .directive('hcChart', function () {
+    return {
+        restrict: 'E',
+        template: '<div></div>',
+        scope: {
+            options: '=',
+            highChart: '=model'
+        },
+        link: function (scope, element) {
+            scope.highChart = Highcharts.chart(element[0], scope.options);
+        }
+    };
+})
