@@ -48,7 +48,11 @@
 
       this.chartOptions = {
         title: {
-          text: 'Temperature data'
+          text: ''
+        },
+        chart: {
+          width: 900,
+          height: 750
         },
         xAxis: {
           id: 'dates-data',
@@ -97,6 +101,11 @@
           }
 
           // Adding data to the Chart
+          this.hChart.setTitle({text: this.sensor.name});
+
+          if(this.hChart.series.length > 0) 
+            this.hChart.series[0].remove(true);
+
           this.hChart.xAxis[0].setCategories(this.labels);
 
           this.hChart.addSeries({

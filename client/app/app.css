@@ -26,10 +26,21 @@
   font-style: normal;
 }
 
+/**
+ * Font Circular Std
+ */
+
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../assets/fonts/CircularStd-Medium.eot');
+  src: url('../assets/fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/CircularStd-Medium.woff') format('woff'), url('../assets/fonts/CircularStd-Medium.ttf') format('truetype'), url('../assets/fonts/CircularStd-Medium.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
 
 html, body, .body, .right_col, .main_container {
   min-height: 100%;
-  font-family: sans-serif, Arial;
+  font-family: 'CircularStd', sans-serif, Arial;
 }
 
 html, body, .right_col {
@@ -2553,12 +2564,13 @@ body {
   padding: 10px 0;
 }
 .page-title .title_left {
-  width: 45%;
+  width: 100%;
   float: left;
   display: block;
 }
 .page-title .title_left h3 {
-  margin: 9px 0;
+  text-align: center;
+  margin: 25px 0px 25px 0px;
 }
 .page-title .title_right {
   width: 55%;
@@ -2807,7 +2819,7 @@ li.current-page a {
   font-size: 19px;
   width: 100%;
   color: #ECF0F1 !important;
-  margin-left: 0 !important;
+  margin-left: 7px !important;
   line-height: 59px;
   display: block;
   height: 55px;
@@ -2819,6 +2831,7 @@ li.current-page a {
 }
 .nav.navbar-nav>li>a {
   color: #515356 !important;
+  font-size: 18px;
 }
 .nav.top_menu>li>a {
   position: relative;
@@ -3046,7 +3059,7 @@ h2 {
   padding: 10px 17px;
   display: inline-block;
   background: #fff;
-  border: 1px solid #E6E9ED;
+  border-radius: 4px;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
@@ -7637,4 +7650,9 @@ ul.notifications {
 .side-menu-btn:hover, .side-menu-btn:focus, .side-menu-btn:active {
   background-color: #2098D1;
   color: white;
+}
+
+.btn-sensor-exp {
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
 }

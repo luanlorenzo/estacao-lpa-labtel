@@ -25,8 +25,7 @@ module.exports = function(config) {
       'client/bower_components/chosen/chosen.jquery.js',
       'client/bower_components/angular-chosen-localytics/dist/angular-chosen.js',
       'client/bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js',
-      'client/bower_components/Chart.js/Chart.js',
-      'client/bower_components/angular-chart.js/dist/angular-chart.js',
+      'client/bower_components/highcharts/highcharts.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',

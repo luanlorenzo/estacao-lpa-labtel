@@ -13,9 +13,8 @@ angular.module('siteCurApp', [
   'ui.bootstrap',
   'validation.match',
   'ui.bootstrap.datetimepicker',
-  'chart.js'
 ])
-  .config(function($urlRouterProvider, $locationProvider, ChartJsProvider) {
+  .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
       .otherwise('/');
 

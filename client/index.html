@@ -8,17 +8,23 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <base href="/">
-    <title>Estação Meteológica - UFSC Araranguá</title>
+    <title>Estação Meteorológica - UFSC Araranguá</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons//favicon-16x16.png">
+    <link rel="manifest" href="/assets/icons//site.webmanifest">
+    <link rel="mask-icon" href="/assets/icons//safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#2cdace">
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
       <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
       <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
       <link rel="stylesheet" href="bower_components/chosen/chosen.css" />
-      <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -27,7 +33,6 @@
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/atuadores/atuadores.css">
-      <link rel="stylesheet" href="app/custom.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/sensor/sensor.css">
       <link rel="stylesheet" href="app/sensor_explorer/sensor_explorer.css">
@@ -43,25 +48,14 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <!--<navbar></navbar>
-    <div ui-view=""></div>
-    <footer></footer>-->
-
     <div class="container body">
-
       <div class="main_container">
-
         <sidemenu></sidemenu>
-
         <navbar></navbar>
-
         <div class="right_col" role="main">
           <div ui-view=""></div>
         </div>
-
       </div>
-
     </div>
 
     <div id="custom_notifications" class="custom-notifications dsp_none">
@@ -103,8 +97,6 @@
       <script src="bower_components/chosen/chosen.jquery.js"></script>
       <script src="bower_components/angular-chosen-localytics/dist/angular-chosen.js"></script>
       <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
-      <script src="bower_components/Chart.js/Chart.js"></script>
-      <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
       <script src="bower_components/highcharts/highcharts.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
