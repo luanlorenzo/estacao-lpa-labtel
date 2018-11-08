@@ -31,6 +31,7 @@ angular.module('siteCurApp', [
     return {
         restrict: 'E',
         template: '<div></div>',
+        replace: true,
         scope: {
             options: '=',
             highChart: '=model'
